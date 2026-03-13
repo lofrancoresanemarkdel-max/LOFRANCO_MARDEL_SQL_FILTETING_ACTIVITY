@@ -11,12 +11,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
 -- Database: `lofranco_markdel`
 --
@@ -35,9 +29,6 @@ CREATE TABLE `customers` (
   `join_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `customers`
---
 
 INSERT INTO `customers` (`customer_id`, `customer_name`, `city`, `membership_level`, `join_date`) VALUES
 (1, 'Alice', 'Cebu', 'Gold', '2025-01-10'),
@@ -50,21 +41,6 @@ INSERT INTO `customers` (`customer_id`, `customer_name`, `city`, `membership_lev
 (8, 'Hannah', 'Cebu', 'Silver', '2025-04-01'),
 (9, 'Ian', 'Bohol', 'Gold', '2025-04-10'),
 (10, 'Julia', 'Cebu', 'Bronze', '2025-04-15');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `customers`
---
-ALTER TABLE `customers`
-  ADD PRIMARY KEY (`customer_id`);
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 SELECT * FROM Customers WHERE city = 'Cebu';
 SELECT * FROM Customers WHERE membership_level = 'Gold';
