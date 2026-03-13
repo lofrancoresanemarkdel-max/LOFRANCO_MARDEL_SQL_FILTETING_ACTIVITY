@@ -65,3 +65,15 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+SELECT * FROM Customers WHERE city = 'Cebu';
+SELECT * FROM Customers WHERE membership_level = 'Gold';
+SELECT * FROM Customers WHERE customer_name LIKE 'A%' OR customer_name LIKE 'D%';
+SELECT * FROM Customers WHERE city = 'Cebu' AND membership_level IN ('Silver','Gold');
+SELECT * FROM Customers WHERE join_date BETWEEN '2025-02-01' AND '2025-03-31';
+SELECT * FROM Customers WHERE city IN ('Bohol','Tagbilaran') AND membership_level = 'Bronze';
+SELECT * FROM Customers WHERE customer_name LIKE '%a%';
+SELECT * FROM Customers WHERE city = 'Cebu' AND membership_level = 'Gold' AND join_date < '2025-03-01';
+SELECT * FROM Customers WHERE city IN ('Bohol','Tagbilaran') AND join_date <= '2025-02-28' AND membership_level IN ('Silver','Bronze');
+SELECT * FROM Customers WHERE customer_id NOT IN (1,4,6) AND join_date > '2025-02-28';
+SELECT * FROM Customers WHERE MONTH(join_date) = 4 AND YEAR(join_date) = 2025 AND city IN ('Cebu','Bohol') AND membership_level <> 'Bronze';
